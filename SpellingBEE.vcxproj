@@ -64,40 +64,93 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Sydney Abuya\source\repos\SpellingBEE\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions);CONSOLE;CONSOLE</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\glad;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\freeglut\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\lib-vc2017;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions);CONSOLE;CONSOLE</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\glad;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\freeglut\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\lib-vc2017;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\glad;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\freeglut\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>;CONSOLE;CONSOLE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\lib-vc2017;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\glad;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\freeglut\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\include;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>;CONSOLE;CONSOLE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLFW\lib-vc2017;C:\Users\Sydney Abuya\source\repos\SpellingBEE\External Resources\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="glad.c" />
     <ClCompile Include="Hello_Triangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
